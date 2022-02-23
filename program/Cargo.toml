@@ -11,7 +11,7 @@ no-entrypoint = []
 
 [dependencies]
 solana-program = "1.9.6"
-agnostic-orderbook = {git = "https://github.com/foonetic/agnostic-orderbook.git", features = ["no-entrypoint", "lib"]}
+agnostic-orderbook = { git = "https://github.com/foonetic/agnostic-orderbook.git", branch = "bonfida", features = ["no-entrypoint", "lib"] }
 num-derive = "0.3.3"
 bytemuck = {version = "1.7.2", features = ["derive"]}
 num_enum = "0.5.4"
