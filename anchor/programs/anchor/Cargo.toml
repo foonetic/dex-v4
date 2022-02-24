@@ -1,0 +1,26 @@
+[package]
+name = "anchor"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "anchor"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-agnostic-orderbook = { git = "https://github.com/foonetic/agnostic-orderbook.git", branch = "fix-import", features = ["cpi"] }
+anchor-lang = "0.22.0"
+anchor-spl = "0.22.0"
+borsh = "0.9.3"
+bytemuck = "1.7.3"
+num-derive = "0.3.3"
+num-traits = "0.2.14"
+thiserror = "1.0.30"
